@@ -1,5 +1,5 @@
 # async-image-renamer
-rename image files using computer vision
+rename image files using Microsoft Computer Vision API
 
 ## Usage
 
@@ -10,12 +10,12 @@ Replace this key with `MICROSOFT_VISION_API_KEY` in renamer.py
 
 ### 2) Usage
 
-`
+```
 python3 -m venv env
 . env/bin/activate
 pip install aiohttp
 python3 renamer.py images
-`
+```
 
 ## Credits
 

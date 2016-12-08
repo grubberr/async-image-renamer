@@ -58,10 +58,13 @@ async def run(filenames):
             (filename, json) = await task
             text = json['description']['captions'][0]['text']
             new_filename = get_new_filename(filename, text)
+            logging.info('rename %s -> %s', filename, new_filename)
             os.rename(filename, new_filename)
 
 
 def main(dir):
+
+    logging.basicConfig(level=logging.INFO)
 
     images = glob.glob(os.path.join(dir, '*.jpg'))
 
